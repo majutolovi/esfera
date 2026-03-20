@@ -1,0 +1,33 @@
+/* Centralização básica da página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Fundo escuro para destacar a esfera */
+}
+
+.esfera {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Torna o elemento circular */
+    cursor: pointer;
+    
+    /* Efeito de iluminação 3D inicial (começa azul) */
+    background: radial-gradient(circle at 65% 15%, #3498db, #000);
+    
+    /* Sombras para aumentar o realismo */
+    box-shadow: 
+        inset -15px -15px 40px rgba(0,0,0,0.8), /* Sombra interna */
+        10px 20px 30px rgba(0,0,0,0.5);          /* Sombra projetada */
+
+    /* Suaviza a transição de cores e tamanho */
+    transition: transform 0.3s ease, background 0.4s ease;
+}
+
+/* Efeito de levitação leve ao passar o mouse */
+.esfera:hover {
+    transform: scale(1.05) translateY(-5px);
+}
